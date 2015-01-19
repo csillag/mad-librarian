@@ -14,10 +14,16 @@
   <li><a href="/book/{{_id}}">{{title}}</a> (by {{> personMentionList persons=authorProfiles}})</li>
 </template>
 
-<template name="books">
+<template name="bookList">
   <ul>
     {{#each books}}
     {{> bookListEntry}}
     {{/each}}
   </ul>
+</template>
+
+
+<template name="books">
+  <h3>Known books:</h3>
+  {{ > bookList books=books}}
 </template>
