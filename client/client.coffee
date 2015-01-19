@@ -8,4 +8,4 @@ Template.hello.events
   'click button': -> 
     Session.set "counter", Session.get("counter") + 1
 
-Router.route "/", -> @render "hello"
+Router.route "/", -> @render "root"
