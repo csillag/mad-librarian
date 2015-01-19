@@ -1,0 +1,29 @@
+<template name="personInfo">
+  <a href="/persons">Other persons</a>
+  <h3>{{name}}</h3>
+  <p>
+    More data:
+    <ul>
+      <li><b>Name:</b>{{name}}</li>
+    </ul>
+  </p>
+</template>
+
+<template name="personMention">
+  <a href="/person/{{_id}}">{{name}}</a>
+</template>
+
+<template name="personMentionList">
+  {{#each persons}}
+  {{> personMention }}
+  {{/each}}
+</template>
+
+<template name="persons">
+  <h3>Known persons:</h3>
+  <ul>
+    {{#each persons}}
+    <li>{{> personMention}}</li>
+    {{/each}}
+  </ul>
+</template>

@@ -1,0 +1,23 @@
+<template name="bookInfo">
+  <a href="/books">Other books</a>
+  <h3>{{Title}}</h3>
+  <p>
+    More data:
+    <ul>
+      <li><b>Title:</b>{{title}}</li>
+      <li><b>Author:</b>{{> personMentionList persons=authorProfiles}}</li>
+    </ul>
+  </p>
+</template>
+
+<template name="bookListEntry">
+  <li><a href="/book/{{_id}}">{{title}}</a> (by {{> personMentionList persons=authorProfiles}})</li>
+</template>
+
+<template name="books">
+  <ul>
+    {{#each books}}
+    {{> bookListEntry}}
+    {{/each}}
+  </ul>
+</template>
