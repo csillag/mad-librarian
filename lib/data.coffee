@@ -3,9 +3,9 @@
 
 @Persons = new Meteor.Collection 'persons', transform: (person) ->
   person.booksBy = Books.find authors: person._id
+  person.articlesBy = Articles.find authors: person._id
 
   person
-
 
 @Books = new Meteor.Collection 'books', transform: (book) ->
   book.authorProfiles = book.authors.map (id) ->
