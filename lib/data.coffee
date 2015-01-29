@@ -1,5 +1,5 @@
 
-# Define out entity types
+# Define our entity types
 
 @Persons = new Meteor.Collection 'persons', transform: (person) ->
   person.booksBy = Books.find authors: person._id
@@ -14,5 +14,6 @@
   book      
 
 @BookCopies = new Meteor.Collection 'book-copies'
+
 @Articles = new Meteor.Collection 'articles'
 
