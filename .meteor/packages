@@ -9,5 +9,6 @@ autopublish
 insecure
 coffeescript
 accounts-password
-accounts-ui
 iron:router
+twbs:bootstrap
+ian:accounts-ui-bootstrap-3
